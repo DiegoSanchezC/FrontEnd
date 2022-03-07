@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Launch Cake</title>
+	<link href="./Styles/cake_style.css" rel="stylesheet">
+</head>
+<body>
+<div class="general">	
+	<div class='banner'>
+		<img class='ban_image' src='./Resources/banner.png' alt='banner'>	
+	</div>
+	<div class='menu'>
+		<a class=mbox href='index.html'>Cake Factory</a>
+		<a class=mbox href='cakes.html'>Haz tu pedido</a>
+		<a class=mbox href='menu.html'>Menú</a>
+		<a class=mbox href='staff.html'>STAFF</a>
+	</div>
+	<h1 style="padding-left: 125px; margin-top: 50px;color: #404040;">Realiza tu Pedido</h1>
+	<div class='pre_cake'>
+		<p>Realiza el siguiente formulario para solicitar tu pedido!</p>
+	</div>
+	<div class='formulary_cakes'>
+		<form class='formulary'>
+			<label for='client_name'>Nombre Completo</label>
+			<input type="text" name='Nombre'/>
+			<label for='client_phone'>Número telefónico</label>
+			<input type="text" name='Phone'/>
+			<label for='client_Email'>Correo electrónico</label>
+			<input type="text" name='Email'/>
+			<div class='selection'>
+			<p>Selecciona el producto que deseas</p>
+				<select name='Producto'>
+				<option value='fresas'>Pastel de Frutas</option>
+				<option value='chocolate'>Pastel de Chocolate</option>
+				<option value='dulce'>Pastel de Dulces</option>
+				<option value='kitkat'>Pastel KitKat</option>
+				<option value='relleno'>Pastel de Relleno</option>
+				<option value='cheese'>Cheesecake</option>
+				<option value='rosca'>Rosca</option>
+				<option value='madalenas'>Madalenas</option>
+			</select>
+			<p>Si seleccionaste pastel de frutas, elige el sabor</p>
+			<p style="font-style: italic; font-size: 12px;"> NOTA: Se puede elegir mitad de un sabor, y de otro</p>
+			<select name='flavor'>
+			<option value='none' selected></option>
+			<option value='fresa'>Fresa</option>
+			<option value='piña'>Piña</option>
+			<option value='coco'>Coco</option>
+			<option value='leche'>Tres leches</option>
+			</select>
+			<p> Mitad de sabor</p>
+			<input type="radio" name='half_flavor' value='n'>
+			<label for="half_flavor">Del mismo sabor</label>
+			<input type="radio" name='half_flavor' value='s'>
+			<label for="half_flavor">De otro Sabor</label>
+			<select name="'falvor_2">
+			<option value='none' selected></option>
+			<option value='fresa'>Fresa</option>
+			<option value='piña'>Piña</option>
+			<option value='coco'>Coco</option>
+			<option value='leche'>Tres leches</option>
+			</select>
+			<p>Si seleccionaste el pastel de relleno, elige uno</p>
+			<select name="relleno">
+			<option value='None' selected></option>
+			<option value='cajeta'>Cajeta</option>
+			<option value='natilla'>Natilla</option>
+			</select>
+			<p>Selecciona un adorno</p>
+			<select name='adorn'>
+			<option value='1' selected>Sencillo</option>
+			<option value='2'>Especial</option>
+			<option value='3'>Personalizado</option>
+			</select>
+			<input id="send" type="submit" value="Hacer pedido">
+
+		</div>
+		</form>
+			
+	</div>
+	</body>
+	<footer>
+		<div class='footer_cake'>
+			<p style="color: #b0b0b0; text-align: center;" >Realizado por Diego Sánchez Castillejos</p>
+		</div>
+	
+	</footer>
+</div>
+
+</body>
+</html>
