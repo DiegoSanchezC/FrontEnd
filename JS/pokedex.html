@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'
+    <meta name="viewport" content="width-device-width, inital-scale=1">
+    <link rel='stylesheet' href='./pokedex.css'>
+    <title>PokeDex</title>
+
+  </head>
+  <body>
+    <div class='general'>
+      <div class='content'>
+        <div class='p_cont'>
+          <div class='p_base'>
+            <div class='button_cont'>
+              <div class='button_on'  id='power_button' onclick='powerButton()'>
+                <button class='main_button' id='button'><img src='./Resources/on_icon.png'></button>
+             </div> 
+           </div>
+           <div class='screen_cont'>
+            <div class='screen'>
+              <h1>PokeDexPD001</h1>
+              <p>Creada por: DASC</p>
+              <a href='https://github.com/DiegoSanchezC' target='_blank'>git: https://github.com/DiegoSanchezC</a>
+              <p>Poke api utilizada: </p>
+              <a href='https://pokeapi.co/' target='_blank'>PokeApi by Paul Hallet</a>
+            </div>
+           </div>
+           <div class='switch_bttns_cont'>
+            <div class='switch_bttns'>
+              <div class='left_button' onclick='subNum()'>
+                 <button><img src='./Resources/left_button.png'></button>
+              </div>
+              <div class='right_button'>
+                 <button onclick='addNum()'><img src='./Resources/right_button.png'></button>
+              </div>
+            </div>
+           </div>
+          </div>
+          <div class='p_main'>
+            <div class='p_content' id='disp_content'>
+              <div class='main_p_content'>
+                <h1 class='tilte_pcontent'>PokeDex</h1>
+                <div class='search_menu'>
+                  <button class='search_button' onclick='fetchPokemon()'>Buscar Pokemon</button>
+                  <input class='search' type='text' placeholder='Nombre del pokemon' id='pokeName' name='pokename'>
+                </div>
+                <div class='info_container'>
+                  <div>
+                    <form class='pokeInfo'>
+                      <label for='pokemon' name='pokemon'> Nombre</label>
+                      <output id='pkName'>Pokemon Name</output>
+                      <br>
+                      <label for='pokemon' name='pokemon' class='typeinfo'> Tipo</label>
+                      <output id='pktype' class='iniType' name='pokemon'>Tipo de Pokemon</output>
+                      <output id='pktype2' class='iniType' name='pokemon'></output>
+                    </form>
+                  </div>
+                  <div class='ablities_cont'>
+                    <h1 class='abilities_h1'>Habilidades</h1>
+                    <div>
+                      <output id='abil_1' class='iniType'></output>
+                      <output id='abil_2'clas='iniType'></output>
+                    </div>
+                  </div>
+                  <div class='main_info'>
+                    <h1>Estadísitcas</h1>
+                    <div class='stats_cont'>
+                      <div class='main_stats'>
+                        <img id='statHP' src='./Resources/stat_0.png'>
+                        <h2 id='hpText'>HP</h2>
+                      </div>
+                      <div class='main_stats'>
+                        <img id='statATTK' src='./Resources/stat_0.png'>
+                        <h2 id='attkText'>ATTK</h2>
+                      </div>
+                      <div class='main_stats'>
+                        <img id='statDEF' src='./Resources/stat_0.png'>
+                        <h2 id='defText'>DEF</h2>
+                      </div>
+                      <div class='main_stats'>
+                        <img id='statSP-ATTK' src='./Resources/stat_0.png'>
+                        <h2 id='spaText'>SP-ATK</h2>
+                      </div>
+                      <div class='main_stats'>
+                        <img id='statSP-DEF' src='./Resources/stat_0.png'>
+                        <h2 id='spdText'>SP-DEF</h2>
+                      </div>
+                      <div class='main_stats'>
+                        <img  id='statSPEED' src='./Resources/stat_0.png'>
+                        <h2 id='speedText'>SPEED</h2>
+                      </div>
+                     </div> 
+                  </div>
+                </div>
+              </div>
+              <div class='p_img_content'>
+                <div class='img_container'>
+                  <div>
+                    <div class='back_image_cont'>
+                      <div class='bar_img'>
+                        <p id='barback_name'>Pokename.backview</p>
+                      </div>
+                      <div class='div_image_back'>
+                        <img class='back_image' src='./Resources/empty_pokeball.png' id='backImage'>
+                      </div>
+                    </div>
+                    <div class='main_img_cont'>
+                      <div class='bar_img'>
+                        <p id='barfront_name'>Pokename.frontview</p>
+                      </div>
+                      <div class='div_image'>
+                        <img class='main_image' id='frontImage' src='./Resources/empty_pokeball.png'>
+                      </div>
+                    </div>
+                    <div class='s_image_content'>
+                      <div class='bar_img'>
+                        <p id='shiny_name'>Pokename.shinyV</p>
+                      </div>
+                      <div class='div_image_back'>
+                        <img class='shiny_image' src='./Resources/empty_pokeball.png' id='shinyImage'>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <footer>
+    <script src='./pokedex.js'></script>
+  </footer>
+</html>

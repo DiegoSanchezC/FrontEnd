@@ -1,0 +1,618 @@
+body{
+	background-color: #191526;
+	font-family: sans-serif;
+}
+.general{
+	width: 100%;
+	display: grid;
+	grid-template-columns: 1fr;
+	margin: 10px 150px;
+	height: 100%;
+}
+/*------ POKE DEX BASE DESIGN --------*/
+.p_cont{
+	display: grid;
+	grid-template-columns: 292px 1fr;
+}
+.p_base{
+	display: grid;
+	grid-template-rows: 100px;
+	background-image: url('./Resources/base.png');
+	/*background-color: #eb9244;*/
+	height: 700px;
+	width: 292px;
+	border-radius: 5px;
+}
+.button_cont{
+	margin-top: 15px;
+	
+	border-radius: 2px;
+}
+.button_on{
+	display: grid;
+	grid-template-columns: 50px 1fr;
+	place-items: center;
+	background-color: #424242;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	margin-top: 10px;
+	margin-left: 10px;
+}
+.model{
+	font-size: 36px;
+	float: right;
+	position: relative;
+	left: 90px;
+	bottom: 20%;
+	color: #424242;
+
+}
+.main_button{
+	position: absolute;
+	background-color: #878787;
+	width: 35px;
+	height: 35px;
+	border-radius: 50%;
+	border-color: #7ce6d9;
+	display: grid;
+	place-items: center;
+}
+.main_button img{
+	width: 15px;
+	height: 15px;
+}
+/*---CRT SCREEN ---*/
+.screen_cont{
+	background-color: #16161c;
+	margin-left: 4px;
+	margin-right: 4px;
+	border-radius: 5px;
+	width: 238px;
+	height: 156px;
+	position: relative;
+	top: 5rem;	
+}
+.screen: :before{
+	font-family: courier;
+	margin-left: 2px;
+	margin-right: 2px;
+	border-radius: 5px;
+	background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+	background-color: #16161c;
+	z-index: 2;
+	background-size: 100% 2px, 3px 100%;
+}
+@keyframes flicker{
+	0% {
+  opacity: 0.27861;
+  }
+  5% {
+  opacity: 0.34769;
+  }
+  10% {
+  opacity: 0.23604;
+  }
+  15% {
+  opacity: 0.90626;
+  }
+  20% {
+  opacity: 0.18128;
+  }
+  25% {
+  opacity: 0.83891;
+  }
+  30% {
+  opacity: 0.65583;
+  }
+  35% {
+  opacity: 0.67807;
+  }
+  40% {
+  opacity: 0.26559;
+  }
+  45% {
+  opacity: 0.84693;
+  }
+  50% {
+  opacity: 0.96019;
+  }
+  55% {
+  opacity: 0.08594;
+  }
+  60% {
+  opacity: 0.20313;
+  }
+  65% {
+  opacity: 0.71988;
+  }
+  70% {
+  opacity: 0.53455;
+  }
+  75% {
+  opacity: 0.37288;
+  }
+  80% {
+  opacity: 0.71428;
+  }
+  85% {
+  opacity: 0.70419;
+  }
+  90% {
+  opacity: 0.7003;
+  }
+  95% {
+  opacity: 0.36108;
+  }
+  100% {
+  opacity: 0.24387;
+  }
+
+}
+
+.screen{
+	font-family: courier;
+	margin-left: 2px;
+	margin-right: 2px;
+	border-radius: 5px;
+	background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+	background-color: #16161c;
+	z-index: 2;
+	background-size: 100% 2px, 3px 100%;
+	animation: flicker 0.0000001s infinite;
+}
+.screen h1{
+	font-size: 14px;
+	color: #94dde1;
+}
+.screen p,a{
+	font-size: 12px;
+	color: #94dde1;
+}
+/*--- SWITCH BUTTONS ---*/
+.switch_bttns{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	position: relative;
+	right: 23px;
+}
+.left_button button{
+	background-color: #424242;
+	border-radius: 5px;
+	float: right;
+	cursor: pointer;
+	border-color: #424242;
+
+}
+.left_button button:onclick{
+	background-color: #373737;
+
+}
+.left_button img{
+	width: 50px;
+	border-radius: 5px;
+}
+.right_button button{
+	background-color: #424242;
+	border-radius: 5px;
+	cursor: pointer;
+	border-color: #424242;
+}
+
+.right_button button::after{
+	transform: scale(0.90);
+	transition: 1s;
+}
+.right_button img{
+	width: 50px;
+}
+.r
+/*------- POKE DEX MAIN CONTENT -------*/
+.p_main{
+	display: grid;
+	grid-template-columns: 1500px;
+
+}
+.p_content{
+	display: grid;
+	grid-template-columns: 750px 500px;
+	background-color: rgba(148,221,225,0.8);
+	position: relative;
+	width: 1250px;
+	top: 35px;
+	border-radius: 5px;
+	margin-right: 0px;
+}
+.main_p_content{
+	background-color: rgba(70,70,70,0.8);
+	border-radius: 5px;
+	margin: 2px;
+
+/* SEARCH BAR */
+}
+.search_menu{
+	display: grid;
+	grid-template-columns: 200px 1fr;
+	height: 30px;
+}
+.tilte_pcontent{
+	display: block;
+	width: 100%;
+	background-color: rgba(66,66,66,0.95);
+	color: #ffff;
+	font-size: 16px;
+	font-weight: normal;
+}
+.search{
+	background-color: rgba(70,70,70,0.95);
+	color: #94dde1;
+	font-size: 20px;
+	font-style: italic;
+}
+.search_button{
+	background-color: rgba(70,70,70,0.95);
+	color: #ffff;
+	font-weight: bold;
+	border-radius: 2px;
+}
+.search_button:hover{
+	color: #94dde1;
+}
+/*----- BASIC INFO -----*/
+.info_container{
+
+}
+.pokeInfo{
+	margin-top: 30px;
+}
+.pokeInfo label{
+	margin-top: 10px;
+	color: #ffff;
+	display: block;
+	font-size: 24px;
+	background-color: rgba(70,70,70,0.95);
+	margin-bottom: 15px;
+}
+#pkName{
+	font-size: 32px;
+	color: #ffff;
+	font-weight: bold;
+	margin-left: 15px;
+	font-style: italic;
+}
+.iniType{
+	margin-left: 15px;
+	color: #cccccc;
+	font-weight: bold;
+}
+/*---- HABILITIES ----*/
+.ablities_class{
+	margin-left: 15px;
+	font-size: 22px;
+	font-weight: bold;
+	color: s;
+	background-color: #e0e0e0;
+	padding: 2px;
+	border-radius: 3px;
+	box-shadow: -3px 5px #383838;
+}
+.abilities_h1{
+	display: block;
+	color: #ffff;
+	background-color: rgba(70,70,70,0.95);
+	font-size: 24px;
+	font-weight: normal;
+
+}
+/*------- MAIN INFO -------*/
+.main_info{
+	display: grid;
+}
+.main_info h1{
+	display: block;
+	background-color: rgba(66,66,66,0.95);
+	color: #ffff;
+	font-size: 24px;
+	font-weight: normal;
+
+}
+.stats_cont{
+	margin-left: 20px;
+	display: grid;
+	grid-template-columns: 115px 115px 115px 115px 115px 115px;
+}
+.main_stats{
+	margin-left: 10px;
+}
+.main_stats h2{
+	font-size: 16px;
+	color: #cccccc;
+}
+.main_stats img{
+	width: 100%;
+}
+
+/*--- POKEMON TYPES TEMPLATES ---*/
+.typeFire{
+	color: #ffff;
+	font-weight: bold;
+	background-color: #db8158;
+	font-size: 20px;
+	border-radius: 5px;
+	border: solid;
+	border-color: #db8158;
+	margin-left: 15px;
+	padding: 5px 10px;
+	box-shadow: -5px 5px #5c3225;
+}
+.typeWater{
+	color: #ffff;
+	font-weight: bold;
+	background-color: #58a0db;
+	font-size: 20px;
+	border-radius: 5px;
+	border: solid;
+	border-color: #58a0db;
+	margin-left: 15px;
+	padding: 5px 10px;
+	box-shadow: -5px 5px #253f63;
+}
+.typeElectric{
+	color: #ffff;
+	font-weight: bold;
+	background-color: #f2e57e;
+	font-size: 20px;
+	border-radius: 5px;
+	border: solid;
+	border-color: #f2e57e;
+	margin-left: 15px;
+	padding: 5px 10px;
+	box-shadow: -5px 5px #735e31;
+}
+.typePoison{
+	color: #ffff;
+	font-weight: bold;
+	background-color: #a258db;
+	font-size: 20px;
+	border-radius: 5px;
+	border: solid;
+	border-color: #a258db;
+	margin-left: 15px;
+	padding: 5px 10px;
+	box-shadow: -5px 5px #2b1c57;
+}
+.typeGrass{
+	color: #ffff;
+	font-weight: bold;
+	background-color: #c1db58;
+	font-size: 20px;
+	border-radius: 5px;
+	border: solid;
+	border-color: #c1db58;
+	margin-left: 15px;
+	padding: 5px 10px;
+	box-shadow: -5px 5px #39591b;
+}
+.typeFlying{
+	color: #ffff;
+	font-weight: bold;
+	background-color: #a1c5ff;
+	font-size: 20px;
+	border-radius: 5px;
+	border: solid;
+	border-color: #a1c5ff;
+	margin-left: 15px;
+	padding: 5px 10px;
+	box-shadow: -5px 5px #232d54;
+}
+.typeBug{
+	color: #ffff;
+	font-weight: bold;
+	background-color: #58db77;
+	font-size: 20px;
+	border-radius: 5px;
+	border: solid;
+	border-color: #58db77;
+	margin-left: 15px;
+	padding: 5px 10px;
+	box-shadow: -5px 5px #215c1c;
+}
+.typeGround{
+	color: #ffff;
+	font-weight: bold;
+	background-color: #ad8e5f;
+	font-size: 20px;
+	border-radius: 5px;
+	border: solid;
+	border-color: #ad8e5f;
+	margin-left: 15px;
+	padding: 5px 10px;
+	box-shadow: -5px 5px #4a391e;
+}
+.typeFairy{
+	color: #ffff;
+	font-weight: bold;
+	background-color: #e67cd8;
+	font-size: 20px;
+	border-radius: 5px;
+	border: solid;
+	border-color: #e67cd8;
+	margin-left: 15px;
+	padding: 5px 10px;
+	box-shadow: -5px 5px #5e285d;
+}
+.typePsychic{
+	color: #ffff;
+	font-weight: bold;
+	background-color: #342470;
+	font-size: 20px;
+	border-radius: 5px;
+	border: solid;
+	border-color: #342470;
+	margin-left: 15px;
+	padding: 5px 10px;
+	box-shadow: -5px 5px #15123d;
+}
+.typeFighting{
+	color: #ffff;
+	font-weight: bold;
+	background-color: #8f4d3b;
+	font-size: 20px;
+	border-radius: 5px;
+	border: solid;
+	border-color: #8f4d3b;
+	margin-left: 15px;
+	padding: 5px 10px;
+	box-shadow: -5px 5px #3d1613;
+}
+.typeSteel{
+	color: #ffff;
+	font-weight: bold;
+	background-color: #636778;
+	font-size: 20px;
+	border-radius: 5px;
+	border: solid;
+	border-color: #636778;
+	margin-left: 15px;
+	padding: 5px 10px;
+	box-shadow: -5px 5px #2c2f38;
+}
+.typeIce{
+	color: #ffff;
+	font-weight: bold;
+	background-color: #abd2f7;
+	font-size: 20px;
+	border-radius: 5px;
+	border: solid;
+	border-color: #abd2f7;
+	margin-left: 15px;
+	padding: 5px 10px;
+	box-shadow: -5px 5px #224959;
+}
+.typeGhost{
+	color: #ffff;
+	font-weight: bold;
+	background-color: #7b5f96;
+	font-size: 20px;
+	border-radius: 5px;
+	border: solid;
+	border-color: #7b5f96;
+	margin-left: 15px;
+	padding: 5px 10px;
+	box-shadow: -5px 5px #392a4d;
+}
+.typeRock{
+	color: #ffff;
+	font-weight: bold;
+	background-color: #b58f7f;
+	font-size: 20px;
+	border-radius: 5px;
+	border: solid;
+	border-color: #b58f7f;
+	margin-left: 15px;
+	padding: 5px 10px;
+	box-shadow: -5px 5px #3b2c20;
+}
+.typeNormal{
+	color: #ffff;
+	font-weight: bold;
+	background-color: #7d7d7d;
+	font-size: 20px;
+	border-radius: 5px;
+	border: solid;
+	border-color: #7d7d7d;
+	margin-left: 15px;
+	padding: 5px 10px;
+	box-shadow: -5px 5px #303030;
+}
+.typeDragon{
+	color: #ffff;
+	font-weight: bold;
+	background-color: #ebc4ff;
+	font-size: 20px;
+	border-radius: 5px;
+	border: solid;
+	border-color: #ebc4ff;
+	margin-left: 15px;
+	padding: 5px 10px;
+	box-shadow: -5px 5px #826391;
+}
+
+/*----------- RIGHT SIDE > PK IMAGE -----------*/
+
+
+/* FRONT */
+.p_img_content{
+	background-color: rgba(70,70,70,0.8);
+	border-radius: 5px;
+	margin: 2px;
+}
+.img_container{
+	display: flex;
+	place-items: center;
+}
+.main_img_cont{
+	display: grid;
+	grid-template-rows: 15px 1fr;
+	position: relative;
+	z-index: 1;
+}
+.bar_img{
+	background-color: rgba(40,40,40,1);
+	border-radius: 2px;
+
+}
+.bar_img p{
+	color: #ffff;
+	font-weight: normal;
+	font-family: courier;
+	font-style: italic;
+	font-size: 14px;
+	margin: 0px;
+	border: 0px;
+}
+.main_image{
+	width: 250px;
+	background-color: rgba(50,50,50,1);
+	padding: 5px;
+	border-radius: 2px;
+}
+/* BACK */
+.back_image{
+	width: 100px;
+}
+.shiny_image{
+	width: 100px;
+}
+.back_image_cont{
+	display: grid;
+	grid-template-rows: 15px 100px;
+	width: 180px;
+	position: relative;
+	min-width: 0px;
+}
+.div_image_back{
+	display: grid;
+	place-items: center;
+	background-color: rgba(50,50,50,1);
+	border-radius: 2px;
+}
+
+#barback_name{
+	font-size: 12px;
+}
+/* SHINY */
+.s_image_content{
+	display: grid;
+	grid-template-rows: 15px 100px;
+	width: 180px;
+	position: relative;
+	z-index: 2;
+}
+.shiny_image{
+	padding 5px
+}
+
+#shiny_name{
+	font-size: 12px;
+}		
